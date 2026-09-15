@@ -1,7 +1,13 @@
-fetch('countries.json')
-.then(data => data.json() )   
-.then(json => {
+const url = 'https://api.restcountries.com/countries/v5';
+const options = {
+  method: 'GET',
+  headers: {Authorization: 'Bearer rc_live_95e1798cad32478fb42fcbcb73e98b97'}
+};
 
+try {
+  const response = await fetch(url, options);
+  const json = await response.json(); 
+  
   console.log(json)
   
   // sort an array of countries by comparing area
@@ -28,6 +34,8 @@ fetch('countries.json')
      
      document.querySelector('#countries') .appendChild(div)
   })
- 
-})
 
+} catch (error) {
+  console.error(error);
+}
+ 
