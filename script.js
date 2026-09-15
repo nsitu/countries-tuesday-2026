@@ -32,7 +32,7 @@ async function fetchAndDisplayCountries() {
         `<img class="flag" src="${flagImage}">
         <h4>${country?.names?.common}</h4>
         <p>${country?.area} km²</p> 
-        <p><b>Lat/Lng</b> ${country?coordinates?.lat}°,${country?.coordinates?.lng}°</p> ` 
+        <p><b>Lat/Lng</b> ${country?.coordinates?.lat}°,${country?.coordinates?.lng}°</p> ` 
       
       document.querySelector('#countries') .appendChild(div)
     })
