@@ -24,7 +24,7 @@ async function fetchAndDisplayCountries() {
       // 
 
       let code = country?.codes?.alpha_3?.toLowerCase()  
-      let flagImage = code != '' ? `https://raw.githubusercontent.com/mledoze/countries/master/data/${code}.svg` : 'flag.svg'
+      let flagImage = code !== '' ? `https://raw.githubusercontent.com/mledoze/countries/master/data/${code}.svg` : 'flag.svg'
       
       // make a div to hold each planet
       let div = document.createElement('div') 
