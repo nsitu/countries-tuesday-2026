@@ -12,7 +12,7 @@ async function fetchAndDisplayCountries() {
     console.log(json)
     
     // sort an array of countries by comparing area
-    let sorted = json.sort((a,b) =>  a.area - b.area  ); 
+    let sorted = json.data.objects.sort((a,b) =>  a.area - b.area  ); 
 
     
     sorted.forEach( country => { 
